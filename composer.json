@@ -36,15 +36,19 @@
         }
     },
     "scripts": {
-        "post-install-cmd": [
-            "@php download.php",
-            "php -r \"copy('server.js', 'socket-server.js');\"",
-            "php -r \"copy('server.js', 'config/socket-server.js');\""
-        ],
+        "post-update-cmd": "MyVendor\\MyClass::postUpdate",
         "post-package-install": [
-            "@php download.php",
-            "php -r \"copy('server.js', 'socket-server.js');\"",
-            "php -r \"copy('server.js', 'config/socket-server.js');\""
+            "MyVendor\\MyClass::postPackageInstall"
+        ],
+        "post-install-cmd": [
+            "MyVendor\\MyClass::warmCache",
+            "phpunit -c app/"
+        ],
+        "post-autoload-dump": [
+            "MyVendor\\MyClass::postAutoloadDump"
+        ],
+        "post-create-project-cmd": [
+            "php -r \"copy('config/local-example.php', 'config/local.php');\""
         ]
     }
     

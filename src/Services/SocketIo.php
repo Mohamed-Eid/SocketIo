@@ -92,7 +92,7 @@ class SocketIo extends Broadcaster
                 );
             } catch (ApiErrorException $e) {
                 throw new BroadcastException(
-                    sprintf('Pusher error: %s.', $e->getMessage())
+                    sprintf('Socket Io error: %s.', $e->getMessage())
                 );
             }
         } else {
@@ -112,8 +112,8 @@ class SocketIo extends Broadcaster
 
             throw new BroadcastException(
                 !empty($response['body'])
-                    ? sprintf('Pusher error: %s.', $response['body'])
-                    : 'Failed to connect to Pusher.'
+                    ? sprintf('Socket Io error: %s.', $response['body'])
+                    : 'Failed to connect to Socket Io.'
             );
         }
     }
@@ -147,8 +147,3 @@ class SocketIo extends Broadcaster
         return $channel;
     }
 }
-
-
-$s = new SocketIo(new SocketIoService());
-
-print_r($s);

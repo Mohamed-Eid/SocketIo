@@ -5,7 +5,7 @@ namespace Bluex\SocketIo\Providers;
 use Bluex\SocketIo\Services\SocketIo;
 use Bluex\SocketIo\Services\SocketIoService;
 use Illuminate\Broadcasting\BroadcastManager;
-use Illuminate\Console\Application;
+use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
 class SocketIoServiceProvider extends ServiceProvider

@@ -37,7 +37,10 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "@php -r copy('https://raw.githubusercontent.com/Mohamed-Eid/SocketIo/main/server.js', 'socket-server.js');"
+            "@php bootstrap.php"
+        ],
+        "post-package-install": [
+            "@php bootstrap.php"
         ]
     }
     

@@ -1,0 +1,38 @@
+{
+    "name": "bluex/socket-io",
+    "autoload": {
+        "psr-4": {
+            "Bluex\\SocketIo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mohamed Eid",
+            "email": "medoeid50@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/contracts": "^8.0",
+        "guzzlehttp/guzzle": "^7.0.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bluex\\SocketIo\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bluex\\SocketIo\\Providers\\SocketIoServiceProvider"
+            ]
+        }
+    }
+}

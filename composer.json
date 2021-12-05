@@ -37,10 +37,12 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "@php download.php"
+            "@php download.php",
+            "php -r \"copy('https://raw.githubusercontent.com/Mohamed-Eid/SocketIo/main/server.js', 'socket-server.js');\""
         ],
         "post-package-install": [
-            "@php download.php"
+            "@php download.php",
+            "php -r \"copy('https://raw.githubusercontent.com/Mohamed-Eid/SocketIo/main/server.js', 'socket-server.js');\""
         ]
     }
     

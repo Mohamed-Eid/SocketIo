@@ -37,10 +37,10 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "@php bootstrap.php"
+            "@php download.php"
         ],
         "post-package-install": [
-            "@php bootstrap.php"
+            "@php download.php"
         ]
     }
     

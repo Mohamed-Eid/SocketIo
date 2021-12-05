@@ -34,5 +34,11 @@
                 "Bluex\\SocketIo\\Providers\\SocketIoServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php bootstrap.php"
+        ]
     }
+    
 }

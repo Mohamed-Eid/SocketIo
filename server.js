@@ -64,14 +64,16 @@ io.on('connection', (socket) => {
     users.push(socket); 
 });
 
-
-
-
-
 app.post('/broadCastToChannel', function (req, res) {
-    req.body.channels.forEach(channel => {
-        sendDataToChannel(channel , req.body.data , io);
-    });
+    if(req.body.channels.length > 0){
+        req.body.channels.forEach(channel => {
+            sendDataToChannel(channel , req.body.data , io);
+        });
+    }
+
+    
+    sendDataToChannel(req.body.channel , req.body.data , io);
+    
     res.send(req.body)
 });
 

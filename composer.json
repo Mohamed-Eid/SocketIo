@@ -1,5 +1,8 @@
 {
     "name": "bluex/socket-io",
+    "description": "Socket Io Interface For laravel.",
+    "keywords": ["socket io", "laravel"],
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Bluex\\SocketIo\\": "src/"

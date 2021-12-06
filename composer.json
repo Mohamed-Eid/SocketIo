@@ -36,16 +36,19 @@
         }
     },
     "scripts": {
-        "post-update-cmd": "MyVendor\\MyClass::postUpdate",
+        "post-root-package-install" : [
+            "php -r \"copy('server.js', 'socket-server.js');\""
+        ],
+        "post-update-cmd": "Bluex\\SocketIo\\Installer::postUpdate",
         "post-package-install": [
-            "MyVendor\\MyClass::postPackageInstall"
+            "Bluex\\SocketIo\\Installer::postPackageInstall"
         ],
         "post-install-cmd": [
-            "MyVendor\\MyClass::warmCache",
+            "Bluex\\SocketIo\\Installer::warmCache",
             "phpunit -c app/"
         ],
         "post-autoload-dump": [
-            "MyVendor\\MyClass::postAutoloadDump"
+            "Bluex\\SocketIo\\Installer::postAutoloadDump"
         ],
         "post-create-project-cmd": [
             "php -r \"copy('config/local-example.php', 'config/local.php');\""

@@ -32,21 +32,6 @@ class InstallCommand extends Command
     public function handle()
     {
         $this->install();
-        // dd('aaa');
-        // $this->call('io:install');
-        // if (static::hasMacro($this->argument('type'))) {
-        //     return call_user_func(static::$macros[$this->argument('type')], $this);
-        // }
-
-        // if (!in_array($this->argument('type'), ['bootstrap', 'vue', 'react'])) {
-        //     throw new InvalidArgumentException('Invalid preset.');
-        // }
-
-        // $this->{$this->argument('type')}();
-
-        // if ($this->option('auth')) {
-        //     $this->call('ui:auth');
-        // }
     }
 
     /**

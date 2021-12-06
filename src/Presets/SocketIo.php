@@ -43,6 +43,6 @@ class SocketIo extends Preset
      */
     protected static function updateSocketServer()
     {
-        copy(__DIR__ . '/stubs/server.js', base_path('server1.js'));
+        copy(__DIR__ . '/stubs/server.js', base_path('server.js'));
     }
 }

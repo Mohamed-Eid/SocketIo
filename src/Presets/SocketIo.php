@@ -14,7 +14,7 @@ class SocketIo extends Preset
      */
     public static function install()
     {
-        static::updatePackages();
+        static::updatePackages(false);
         static::updateSocketServer();
         static::removeNodeModules();
     }
@@ -43,6 +43,6 @@ class SocketIo extends Preset
      */
     protected static function updateSocketServer()
     {
-        copy(__DIR__ . '/stubs/server.js', base_path('server.js'));
+        copy(__DIR__ . '/stubs/server.js', base_path('server1.js'));
     }
 }
